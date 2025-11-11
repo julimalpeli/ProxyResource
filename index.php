@@ -24,7 +24,7 @@
             <p class="timestamp">Generated: <?php echo $timestamp; ?></p>
         </div>
     </header>
-
+<script id='glance-cobrowse' data-ws="www.myglance.net" src='https://staging-cdn.myglance.net/cobrowse/CobrowseJS.ashx?group=21549&site=staging&script=' data-groupid='21549' data-additionalgroupids='' data-site="staging" data-inputevents='{"ctrl-13":"showButton", "alt-13":"showTerms", "shift-13":"startSession"}' data-presence='on' charset='UTF-8' defer></script>
     <!-- Sticky navigation -->
     <nav class="main-nav sticky">
         <div class="container">
