@@ -1,0 +1,115 @@
+═══════════════════════════════════════════════════════════════
+  🎥 CAM SERVICE TESTING PLATFORM - QUICK INSTRUCTIONS
+═══════════════════════════════════════════════════════════════
+
+📋 SUMMARY
+-----------
+Complete PHP website with multiple visual elements for
+comprehensive screen sharing testing.
+
+🚀 QUICK START
+--------------
+
+1. Open terminal in project directory:
+   cd /workspace
+
+2. Start PHP server:
+   php -S localhost:8000
+
+3. Open browser at:
+   http://localhost:8000
+
+⚡ ALTERNATIVES
+---------------
+
+XAMPP/WAMP/MAMP:
+- Copy folder to htdocs/
+- Access via http://localhost/workspace
+
+Docker:
+- docker run -d -p 8080:80 -v $(pwd):/var/www/html php:apache
+- Access at http://localhost:8080
+
+📁 MAIN FILES
+-------------
+
+/workspace/
+  ├── index.php              ← Main file (open this)
+  ├── README.md              ← Complete documentation
+  └── assets/
+      ├── css/               ← Styles and animations
+      ├── js/                ← Interactive JavaScript
+      ├── images/            ← Test SVG images
+      └── fonts/             ← Custom fonts
+
+🎨 INCLUDED TEST ELEMENTS
+--------------------------
+
+✅ SVG Images (6 different)
+✅ CSS Animations (8 types)
+✅ Complete forms with validation
+✅ Animated canvas with particles
+✅ Dynamic tables with progress bars
+✅ Typography with special effects
+✅ Alerts and notifications
+✅ Cards with hover effects
+✅ Sticky navigation with smooth scroll
+✅ Gradients and patterns
+✅ Dynamic PHP information
+
+🔍 RECOMMENDED TESTS
+--------------------
+
+1. Share full screen
+2. Share browser window
+3. Share specific tab
+4. Verify that you can see:
+   - Colors and gradients correctly
+   - Smooth animations
+   - Interactive forms
+   - Canvas with particles
+   - Hover effects
+   - Progress bars
+
+📊 TECHNICAL FEATURES
+---------------------
+
+- Pure PHP (no dependencies)
+- Semantic HTML5
+- CSS3 with animations
+- Vanilla JavaScript (no frameworks)
+- Scalable vector SVG
+- Responsive design
+- Performance optimized
+
+🐛 TROUBLESHOOTING
+------------------
+
+Problem: "php: command not found"
+Solution: Install PHP 7.0+ or use XAMPP/WAMP
+
+Problem: Port 8000 busy
+Solution: Use another port (php -S localhost:9000)
+
+Problem: Styles not showing
+Solution: Verify assets/ is in same directory
+
+⌨️ KEYBOARD SHORTCUTS
+---------------------
+
+Ctrl + Shift + D = Display debug info in console
+
+🎯 RECOMMENDED USE
+------------------
+
+This site is specifically designed to test
+screen sharing services and verify that all
+visual elements are transmitted correctly
+on the receiver's side.
+
+It includes various element types to guarantee
+a complete test of rendering capabilities.
+
+═══════════════════════════════════════════════════════════════
+  Ready to use! Start the server and begin testing
+═══════════════════════════════════════════════════════════════
