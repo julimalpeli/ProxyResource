@@ -1,0 +1,299 @@
+/* ==================================
+   CAM Service Testing - Fuentes Personalizadas
+   ================================== */
+
+/* 
+   Nota: Estas son definiciones de fuentes que utilizan las fuentes del sistema
+   como fallback para asegurar compatibilidad sin necesidad de archivos externos
+*/
+
+/* Display Font - Para títulos grandes y llamativos */
+@font-face {
+    font-family: 'Display Font';
+    src: local('Georgia'), local('Times New Roman'), local('serif');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Display Font';
+    src: local('Georgia Bold'), local('Times New Roman Bold'), local('serif');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Heading Font - Para encabezados y subtítulos */
+@font-face {
+    font-family: 'Heading Font';
+    src: local('Arial Black'), local('Helvetica Bold'), local('sans-serif');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Heading Font';
+    src: local('Arial'), local('Helvetica'), local('sans-serif');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Body Font - Para texto de cuerpo */
+@font-face {
+    font-family: 'Body Font';
+    src: local('Segoe UI'), local('Helvetica Neue'), local('Arial'), local('sans-serif');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Body Font';
+    src: local('Segoe UI Bold'), local('Helvetica Neue Bold'), local('Arial Bold');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Body Font';
+    src: local('Segoe UI Italic'), local('Helvetica Neue Italic'), local('Arial Italic');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Monospace Font - Para código */
+@font-face {
+    font-family: 'Mono Font';
+    src: local('Consolas'), local('Monaco'), local('Courier New'), local('monospace');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Fuentes adicionales con estilos especiales */
+
+/* Fuente con efectos de sombra */
+.font-shadow {
+    font-family: 'Display Font', Georgia, serif;
+    text-shadow: 
+        2px 2px 4px rgba(0,0,0,0.3),
+        4px 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Fuente con outline */
+.font-outline {
+    font-family: 'Heading Font', Arial Black, sans-serif;
+    color: transparent;
+    -webkit-text-stroke: 2px #2196F3;
+    text-stroke: 2px #2196F3;
+}
+
+/* Fuente con efecto 3D */
+.font-3d {
+    font-family: 'Heading Font', Arial Black, sans-serif;
+    color: #2196F3;
+    text-shadow:
+        1px 1px 0 #1976D2,
+        2px 2px 0 #1565C0,
+        3px 3px 0 #0D47A1,
+        4px 4px 6px rgba(0,0,0,0.3);
+}
+
+/* Fuente con efecto neón */
+.font-neon {
+    font-family: 'Display Font', Georgia, serif;
+    color: #fff;
+    text-shadow:
+        0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 20px #fff,
+        0 0 40px #0ff,
+        0 0 80px #0ff,
+        0 0 90px #0ff,
+        0 0 100px #0ff,
+        0 0 150px #0ff;
+    animation: neonPulse 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neonPulse {
+    from {
+        text-shadow:
+            0 0 5px #fff,
+            0 0 10px #fff,
+            0 0 20px #fff,
+            0 0 40px #0ff,
+            0 0 80px #0ff,
+            0 0 90px #0ff,
+            0 0 100px #0ff,
+            0 0 150px #0ff;
+    }
+    to {
+        text-shadow:
+            0 0 2px #fff,
+            0 0 5px #fff,
+            0 0 10px #fff,
+            0 0 20px #0ff,
+            0 0 40px #0ff,
+            0 0 45px #0ff,
+            0 0 50px #0ff,
+            0 0 75px #0ff;
+    }
+}
+
+/* Fuente con efecto retro */
+.font-retro {
+    font-family: 'Mono Font', Courier New, monospace;
+    color: #00ff00;
+    background: #000;
+    padding: 10px;
+    text-shadow: 0 0 5px #00ff00;
+    letter-spacing: 2px;
+}
+
+/* Fuente con efecto rainbow */
+.font-rainbow {
+    font-family: 'Display Font', Georgia, serif;
+    background: linear-gradient(
+        to right,
+        #ff0000,
+        #ff7f00,
+        #ffff00,
+        #00ff00,
+        #0000ff,
+        #4b0082,
+        #9400d3
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-size: 200% auto;
+    animation: rainbowShift 3s linear infinite;
+}
+
+@keyframes rainbowShift {
+    to {
+        background-position: 200% center;
+    }
+}
+
+/* Fuente con efecto glitch */
+.font-glitch {
+    font-family: 'Heading Font', Arial Black, sans-serif;
+    position: relative;
+    color: #fff;
+}
+
+.font-glitch::before,
+.font-glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.font-glitch::before {
+    left: 2px;
+    text-shadow: -2px 0 #ff00ff;
+    clip: rect(24px, 550px, 90px, 0);
+    animation: glitchBefore 3s infinite linear alternate-reverse;
+}
+
+.font-glitch::after {
+    left: -2px;
+    text-shadow: -2px 0 #00ffff;
+    clip: rect(85px, 550px, 140px, 0);
+    animation: glitchAfter 2.5s infinite linear alternate-reverse;
+}
+
+@keyframes glitchBefore {
+    0% { clip: rect(61px, 9999px, 52px, 0); }
+    5% { clip: rect(33px, 9999px, 144px, 0); }
+    10% { clip: rect(121px, 9999px, 115px, 0); }
+    15% { clip: rect(144px, 9999px, 162px, 0); }
+    20% { clip: rect(62px, 9999px, 180px, 0); }
+    25% { clip: rect(34px, 9999px, 42px, 0); }
+    30% { clip: rect(147px, 9999px, 179px, 0); }
+    35% { clip: rect(99px, 9999px, 63px, 0); }
+    40% { clip: rect(188px, 9999px, 122px, 0); }
+    45% { clip: rect(154px, 9999px, 14px, 0); }
+    50% { clip: rect(63px, 9999px, 37px, 0); }
+    55% { clip: rect(161px, 9999px, 147px, 0); }
+    60% { clip: rect(109px, 9999px, 175px, 0); }
+    65% { clip: rect(157px, 9999px, 88px, 0); }
+    70% { clip: rect(173px, 9999px, 131px, 0); }
+    75% { clip: rect(62px, 9999px, 70px, 0); }
+    80% { clip: rect(24px, 9999px, 153px, 0); }
+    85% { clip: rect(138px, 9999px, 40px, 0); }
+    90% { clip: rect(79px, 9999px, 136px, 0); }
+    95% { clip: rect(25px, 9999px, 34px, 0); }
+    100% { clip: rect(173px, 9999px, 166px, 0); }
+}
+
+@keyframes glitchAfter {
+    0% { clip: rect(26px, 9999px, 33px, 0); }
+    5% { clip: rect(154px, 9999px, 67px, 0); }
+    10% { clip: rect(147px, 9999px, 180px, 0); }
+    15% { clip: rect(16px, 9999px, 37px, 0); }
+    20% { clip: rect(133px, 9999px, 148px, 0); }
+    25% { clip: rect(105px, 9999px, 175px, 0); }
+    30% { clip: rect(169px, 9999px, 74px, 0); }
+    35% { clip: rect(121px, 9999px, 45px, 0); }
+    40% { clip: rect(157px, 9999px, 99px, 0); }
+    45% { clip: rect(67px, 9999px, 155px, 0); }
+    50% { clip: rect(83px, 9999px, 11px, 0); }
+    55% { clip: rect(26px, 9999px, 166px, 0); }
+    60% { clip: rect(95px, 9999px, 187px, 0); }
+    65% { clip: rect(188px, 9999px, 81px, 0); }
+    70% { clip: rect(149px, 9999px, 117px, 0); }
+    75% { clip: rect(16px, 9999px, 76px, 0); }
+    80% { clip: rect(67px, 9999px, 142px, 0); }
+    85% { clip: rect(39px, 9999px, 165px, 0); }
+    90% { clip: rect(133px, 9999px, 53px, 0); }
+    95% { clip: rect(176px, 9999px, 136px, 0); }
+    100% { clip: rect(42px, 9999px, 145px, 0); }
+}
+
+/* Estilos de tamaño de fuente */
+.text-xs { font-size: 0.75rem; }
+.text-sm { font-size: 0.875rem; }
+.text-base { font-size: 1rem; }
+.text-lg { font-size: 1.125rem; }
+.text-xl { font-size: 1.25rem; }
+.text-2xl { font-size: 1.5rem; }
+.text-3xl { font-size: 1.875rem; }
+.text-4xl { font-size: 2.25rem; }
+.text-5xl { font-size: 3rem; }
+.text-6xl { font-size: 4rem; }
+
+/* Estilos de peso de fuente */
+.font-thin { font-weight: 100; }
+.font-light { font-weight: 300; }
+.font-normal { font-weight: 400; }
+.font-medium { font-weight: 500; }
+.font-semibold { font-weight: 600; }
+.font-bold { font-weight: 700; }
+.font-extrabold { font-weight: 800; }
+.font-black { font-weight: 900; }
+
+/* Estilos de espaciado de letras */
+.tracking-tighter { letter-spacing: -0.05em; }
+.tracking-tight { letter-spacing: -0.025em; }
+.tracking-normal { letter-spacing: 0; }
+.tracking-wide { letter-spacing: 0.025em; }
+.tracking-wider { letter-spacing: 0.05em; }
+.tracking-widest { letter-spacing: 0.1em; }
+
+/* Estilos de altura de línea */
+.leading-none { line-height: 1; }
+.leading-tight { line-height: 1.25; }
+.leading-snug { line-height: 1.375; }
+.leading-normal { line-height: 1.5; }
+.leading-relaxed { line-height: 1.625; }
+.leading-loose { line-height: 2; }

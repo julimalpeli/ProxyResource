@@ -1,0 +1,115 @@
+═══════════════════════════════════════════════════════════════
+  🎥 CAM SERVICE TESTING PLATFORM - INSTRUCCIONES RÁPIDAS
+═══════════════════════════════════════════════════════════════
+
+📋 RESUMEN
+-----------
+Sitio web completo en PHP con múltiples elementos visuales para
+realizar pruebas exhaustivas de compartir pantalla.
+
+🚀 INICIO RÁPIDO
+-----------------
+
+1. Abrir terminal en el directorio del proyecto:
+   cd /workspace
+
+2. Iniciar servidor PHP:
+   php -S localhost:8000
+
+3. Abrir navegador en:
+   http://localhost:8000
+
+⚡ ALTERNATIVAS
+----------------
+
+XAMPP/WAMP/MAMP:
+- Copiar carpeta a htdocs/
+- Acceder vía http://localhost/workspace
+
+Docker:
+- docker run -d -p 8080:80 -v $(pwd):/var/www/html php:apache
+- Acceder en http://localhost:8080
+
+📁 ARCHIVOS PRINCIPALES
+------------------------
+
+/workspace/
+  ├── index.php              ← Archivo principal (abrir este)
+  ├── README.md              ← Documentación completa
+  └── assets/
+      ├── css/               ← Estilos y animaciones
+      ├── js/                ← JavaScript interactivo
+      ├── images/            ← Imágenes SVG de prueba
+      └── fonts/             ← Fuentes personalizadas
+
+🎨 ELEMENTOS DE PRUEBA INCLUIDOS
+----------------------------------
+
+✅ Imágenes SVG (6 diferentes)
+✅ Animaciones CSS (8 tipos)
+✅ Formularios completos con validación
+✅ Canvas animado con partículas
+✅ Tablas dinámicas con barras de progreso
+✅ Tipografías con efectos especiales
+✅ Alertas y notificaciones
+✅ Cards con efectos hover
+✅ Navegación sticky con scroll suave
+✅ Gradientes y patrones
+✅ Información PHP dinámica
+
+🔍 PRUEBAS RECOMENDADAS
+-------------------------
+
+1. Compartir pantalla completa
+2. Compartir ventana del navegador
+3. Compartir tab específica
+4. Verificar que se vean:
+   - Colores y gradientes correctamente
+   - Animaciones fluidas
+   - Formularios interactivos
+   - Canvas con partículas
+   - Efectos hover
+   - Barras de progreso
+
+📊 CARACTERÍSTICAS TÉCNICAS
+----------------------------
+
+- PHP puro (sin dependencias)
+- HTML5 semántico
+- CSS3 con animaciones
+- JavaScript Vanilla (sin frameworks)
+- SVG vectorial escalable
+- Responsive design
+- Performance optimizado
+
+🐛 SOLUCIÓN DE PROBLEMAS
+--------------------------
+
+Problema: "php: command not found"
+Solución: Instalar PHP 7.0+ o usar XAMPP/WAMP
+
+Problema: Puerto 8000 ocupado
+Solución: Usar otro puerto (php -S localhost:9000)
+
+Problema: No se ven los estilos
+Solución: Verificar que assets/ esté en el mismo directorio
+
+⌨️ ATAJOS DE TECLADO
+----------------------
+
+Ctrl + Shift + D = Mostrar info de debug en consola
+
+🎯 USO RECOMENDADO
+-------------------
+
+Este sitio está diseñado específicamente para probar
+servicios de compartir pantalla (screen sharing) y
+verificar que todos los elementos visuales se transmiten
+correctamente del lado del receptor.
+
+Incluye elementos de diversos tipos para garantizar una
+prueba completa de capacidades de renderizado.
+
+═══════════════════════════════════════════════════════════════
+  ¡Listo para usar! Inicia el servidor y comienza las pruebas
+═══════════════════════════════════════════════════════════════
