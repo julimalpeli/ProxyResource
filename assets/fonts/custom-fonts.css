@@ -1,13 +1,13 @@
 /* ==================================
-   CAM Service Testing - Fuentes Personalizadas
+   CAM Service Testing - Custom Fonts
    ================================== */
 
 /* 
-   Nota: Estas son definiciones de fuentes que utilizan las fuentes del sistema
-   como fallback para asegurar compatibilidad sin necesidad de archivos externos
+   Note: These are font definitions that use system fonts
+   as fallback to ensure compatibility without external files
 */
 
-/* Display Font - Para títulos grandes y llamativos */
+/* Display Font - For large and eye-catching titles */
 @font-face {
     font-family: 'Display Font';
     src: local('Georgia'), local('Times New Roman'), local('serif');
@@ -24,7 +24,7 @@
     font-display: swap;
 }
 
-/* Heading Font - Para encabezados y subtítulos */
+/* Heading Font - For headings and subheadings */
 @font-face {
     font-family: 'Heading Font';
     src: local('Arial Black'), local('Helvetica Bold'), local('sans-serif');
@@ -41,7 +41,7 @@
     font-display: swap;
 }
 
-/* Body Font - Para texto de cuerpo */
+/* Body Font - For body text */
 @font-face {
     font-family: 'Body Font';
     src: local('Segoe UI'), local('Helvetica Neue'), local('Arial'), local('sans-serif');
@@ -66,7 +66,7 @@
     font-display: swap;
 }
 
-/* Monospace Font - Para código */
+/* Monospace Font - For code */
 @font-face {
     font-family: 'Mono Font';
     src: local('Consolas'), local('Monaco'), local('Courier New'), local('monospace');
@@ -75,9 +75,9 @@
     font-display: swap;
 }
 
-/* Fuentes adicionales con estilos especiales */
+/* Additional fonts with special styles */
 
-/* Fuente con efectos de sombra */
+/* Font with shadow effects */
 .font-shadow {
     font-family: 'Display Font', Georgia, serif;
     text-shadow: 
@@ -85,7 +85,7 @@
         4px 4px 8px rgba(0,0,0,0.2);
 }
 
-/* Fuente con outline */
+/* Font with outline */
 .font-outline {
     font-family: 'Heading Font', Arial Black, sans-serif;
     color: transparent;
@@ -93,7 +93,7 @@
     text-stroke: 2px #2196F3;
 }
 
-/* Fuente con efecto 3D */
+/* Font with 3D effect */
 .font-3d {
     font-family: 'Heading Font', Arial Black, sans-serif;
     color: #2196F3;
@@ -104,7 +104,7 @@
         4px 4px 6px rgba(0,0,0,0.3);
 }
 
-/* Fuente con efecto neón */
+/* Font with neon effect */
 .font-neon {
     font-family: 'Display Font', Georgia, serif;
     color: #fff;
@@ -145,7 +145,7 @@
     }
 }
 
-/* Fuente con efecto retro */
+/* Font with retro effect */
 .font-retro {
     font-family: 'Mono Font', Courier New, monospace;
     color: #00ff00;
@@ -155,7 +155,7 @@
     letter-spacing: 2px;
 }
 
-/* Fuente con efecto rainbow */
+/* Font with rainbow effect */
 .font-rainbow {
     font-family: 'Display Font', Georgia, serif;
     background: linear-gradient(
@@ -181,7 +181,7 @@
     }
 }
 
-/* Fuente con efecto glitch */
+/* Font with glitch effect */
 .font-glitch {
     font-family: 'Heading Font', Arial Black, sans-serif;
     position: relative;
@@ -260,7 +260,7 @@
     100% { clip: rect(42px, 9999px, 145px, 0); }
 }
 
-/* Estilos de tamaño de fuente */
+/* Font size styles */
 .text-xs { font-size: 0.75rem; }
 .text-sm { font-size: 0.875rem; }
 .text-base { font-size: 1rem; }
@@ -272,7 +272,7 @@
 .text-5xl { font-size: 3rem; }
 .text-6xl { font-size: 4rem; }
 
-/* Estilos de peso de fuente */
+/* Font weight styles */
 .font-thin { font-weight: 100; }
 .font-light { font-weight: 300; }
 .font-normal { font-weight: 400; }
@@ -282,7 +282,7 @@
 .font-extrabold { font-weight: 800; }
 .font-black { font-weight: 900; }
 
-/* Estilos de espaciado de letras */
+/* Letter spacing styles */
 .tracking-tighter { letter-spacing: -0.05em; }
 .tracking-tight { letter-spacing: -0.025em; }
 .tracking-normal { letter-spacing: 0; }
@@ -290,7 +290,7 @@
 .tracking-wider { letter-spacing: 0.05em; }
 .tracking-widest { letter-spacing: 0.1em; }
 
-/* Estilos de altura de línea */
+/* Line height styles */
 .leading-none { line-height: 1; }
 .leading-tight { line-height: 1.25; }
 .leading-snug { line-height: 1.375; }

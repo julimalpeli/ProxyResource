@@ -1,158 +1,158 @@
 # 🎥 CAM Service Testing Platform
 
-Sitio web completo en PHP para realizar pruebas exhaustivas de servicios de compartir pantalla (CAM service). Incluye múltiples tipos de elementos visuales, animaciones, formularios interactivos y recursos multimedia.
+Complete PHP website for comprehensive screen sharing service (CAM service) testing. Includes multiple types of visual elements, animations, interactive forms, and multimedia resources.
 
-## 📋 Características
+## 📋 Features
 
-### ✨ Elementos Incluidos
+### ✨ Included Elements
 
-- **Imágenes SVG**: Círculos, cuadrados, triángulos, gradientes, patrones y logo personalizado
-- **Estilos CSS Avanzados**: Múltiples efectos visuales, sombras, bordes y gradientes
-- **Animaciones CSS**: Rotación, pulso, rebote, vibración, fade, deslizamiento, escala y más
-- **Fuentes Personalizadas**: Diferentes familias tipográficas con efectos especiales
-- **Formularios Interactivos**: Inputs, selects, checkboxes, radios, range sliders, textareas
-- **Canvas Animado**: Partículas interactivas con conexiones dinámicas
-- **Tablas Dinámicas**: Con progreso visual y badges de estado
-- **Alertas y Notificaciones**: Diferentes tipos (info, success, warning, error)
-- **Cards Responsivas**: Con diversos efectos hover
-- **Navegación Sticky**: Menú fijo con scroll suave
+- **SVG Images**: Circles, squares, triangles, gradients, patterns, and custom logo
+- **Advanced CSS Styles**: Multiple visual effects, shadows, borders, and gradients
+- **CSS Animations**: Rotation, pulse, bounce, shake, fade, slide, scale, and more
+- **Custom Fonts**: Different typographic families with special effects
+- **Interactive Forms**: Inputs, selects, checkboxes, radios, range sliders, textareas
+- **Animated Canvas**: Interactive particles with dynamic connections
+- **Dynamic Tables**: With visual progress and status badges
+- **Alerts and Notifications**: Different types (info, success, warning, error)
+- **Responsive Cards**: With various hover effects
+- **Sticky Navigation**: Fixed menu with smooth scrolling
 
-### 🎨 Tecnologías Utilizadas
+### 🎨 Technologies Used
 
-- **PHP**: Backend y generación dinámica de contenido
-- **HTML5**: Estructura semántica moderna
-- **CSS3**: Estilos avanzados y animaciones
-- **JavaScript (Vanilla)**: Interactividad sin dependencias
-- **SVG**: Gráficos vectoriales escalables
+- **PHP**: Backend and dynamic content generation
+- **HTML5**: Modern semantic structure
+- **CSS3**: Advanced styles and animations
+- **JavaScript (Vanilla)**: Interactivity without dependencies
+- **SVG**: Scalable vector graphics
 
-## 🚀 Instalación y Uso
+## 🚀 Installation and Usage
 
-### Requisitos
+### Requirements
 
-- PHP 7.0 o superior
-- Servidor web (Apache, Nginx, o PHP Built-in Server)
-- Navegador web moderno
+- PHP 7.0 or higher
+- Web server (Apache, Nginx, or PHP Built-in Server)
+- Modern web browser
 
-### Opción 1: Servidor Built-in de PHP (Recomendado para pruebas)
+### Option 1: PHP Built-in Server (Recommended for testing)
 
 ```bash
-# Navegar al directorio del proyecto
+# Navigate to project directory
 cd /workspace
 
-# Iniciar el servidor PHP en el puerto 8000
+# Start PHP server on port 8000
 php -S localhost:8000
 
-# Abrir en el navegador
+# Open in browser
 # http://localhost:8000
 ```
 
-### Opción 2: Apache/Nginx
+### Option 2: Apache/Nginx
 
-1. Copiar los archivos al directorio del servidor web
-2. Configurar el virtual host apuntando a `/workspace`
-3. Acceder mediante el dominio configurado
+1. Copy files to web server directory
+2. Configure virtual host pointing to `/workspace`
+3. Access through configured domain
 
-### Opción 3: Docker (Opcional)
+### Option 3: Docker (Optional)
 
 ```bash
-# Crear un contenedor PHP rápido
+# Create a quick PHP container
 docker run -d -p 8080:80 -v /workspace:/var/www/html php:apache
 
-# Acceder en http://localhost:8080
+# Access at http://localhost:8080
 ```
 
-## 📁 Estructura del Proyecto
+## 📁 Project Structure
 
 ```
 /workspace/
-├── index.php                 # Archivo principal PHP
-├── README.md                 # Este archivo
-├── readme                    # Readme original
+├── index.php                 # Main PHP file
+├── README.md                 # This file
+├── readme                    # Original readme
 └── assets/
     ├── css/
-    │   ├── styles.css       # Estilos principales
-    │   └── animations.css   # Animaciones CSS
+    │   ├── styles.css       # Main styles
+    │   └── animations.css   # CSS animations
     ├── js/
-    │   └── main.js          # JavaScript interactivo
+    │   └── main.js          # Interactive JavaScript
     ├── images/
-    │   ├── circle-red.svg   # Imagen circular roja
-    │   ├── square-blue.svg  # Cuadrado azul
-    │   ├── triangle-green.svg # Triángulo verde
-    │   ├── gradient-bg.svg  # Fondo con gradiente
-    │   ├── pattern.svg      # Patrón decorativo
-    │   └── logo.svg         # Logo CAM Service
+    │   ├── circle-red.svg   # Red circle image
+    │   ├── square-blue.svg  # Blue square
+    │   ├── triangle-green.svg # Green triangle
+    │   ├── gradient-bg.svg  # Gradient background
+    │   ├── pattern.svg      # Decorative pattern
+    │   └── logo.svg         # CAM Service logo
     └── fonts/
-        └── custom-fonts.css # Definiciones de fuentes
+        └── custom-fonts.css # Font definitions
 ```
 
-## 🎯 Secciones de Prueba
+## 🎯 Test Sections
 
-### 1. Información del Servidor PHP
-- Versión de PHP
-- Información del servidor
-- Host actual
-- Color aleatorio generado dinámicamente
+### 1. PHP Server Information
+- PHP version
+- Server information
+- Current host
+- Randomly generated color
 
-### 2. Pruebas de Imágenes
-- 6 imágenes SVG diferentes
-- Diferentes tamaños y formas
-- Efectos hover
+### 2. Image Tests
+- 6 different SVG images
+- Different sizes and shapes
+- Hover effects
 
-### 3. Pruebas de Tipografía
-- Múltiples familias de fuentes
-- Estilos de texto variados
-- Efectos especiales (sombra, gradiente, outline, 3D, neón, glitch)
+### 3. Typography Tests
+- Multiple font families
+- Varied text styles
+- Special effects (shadow, gradient, outline, 3D, neon, glitch)
 
-### 4. Pruebas de Formularios
-- Inputs de texto, email, teléfono, fecha
-- Select con opciones generadas por PHP
-- Checkboxes y radio buttons
-- Range slider con feedback visual
+### 4. Form Tests
+- Text, email, phone, date inputs
+- Select with PHP-generated options
+- Checkboxes and radio buttons
+- Range slider with visual feedback
 - Textarea
-- Validación en tiempo real
+- Real-time validation
 
-### 5. Pruebas de Animaciones
-- 8 tipos diferentes de animaciones CSS
-- Animaciones infinitas
-- Diferentes timings y efectos
+### 5. Animation Tests
+- 8 different CSS animation types
+- Infinite animations
+- Different timings and effects
 
-### 6. Pruebas de Media
+### 6. Media Tests
 - Video placeholder
-- Canvas con animación de partículas
-- iFrame de prueba
+- Canvas with particle animation
+- Test iFrame
 
-### 7. Pruebas de Tablas
-- Tabla dinámica con datos PHP
-- Badges de estado
-- Barras de progreso animadas
-- Botones de acción
+### 7. Table Tests
+- Dynamic table with PHP data
+- Status badges
+- Animated progress bars
+- Action buttons
 
-### 8. Elementos Varios
-- Cards con diferentes estilos
-- Alertas de colores
-- Footer con información dinámica
+### 8. Miscellaneous Elements
+- Cards with different styles
+- Colored alerts
+- Footer with dynamic information
 
-## 🔧 Características JavaScript
+## 🔧 JavaScript Features
 
-### Funcionalidades Implementadas
+### Implemented Functionalities
 
-- **Range Slider Interactivo**: Actualización en tiempo real del valor
-- **Canvas Animado**: 50 partículas con física simple y conexiones
-- **Scroll Suave**: Navegación fluida entre secciones
-- **Validación de Formularios**: Feedback visual inmediato
-- **Intersection Observer**: Animaciones al hacer scroll
-- **Color Changer**: Cambio aleatorio de colores en animaciones
-- **Alertas Personalizadas**: Sistema de notificaciones
-- **Monitoreo de Performance**: Métricas de carga y renderizado
-- **Event Handlers**: Teclado, resize, visibility change
+- **Interactive Range Slider**: Real-time value updates
+- **Animated Canvas**: 50 particles with simple physics and connections
+- **Smooth Scrolling**: Fluid navigation between sections
+- **Form Validation**: Immediate visual feedback
+- **Intersection Observer**: Scroll-triggered animations
+- **Color Changer**: Random color changes in animations
+- **Custom Alerts**: Notification system
+- **Performance Monitoring**: Load and rendering metrics
+- **Event Handlers**: Keyboard, resize, visibility change
 
-### Atajos de Teclado
+### Keyboard Shortcuts
 
-- `Ctrl + Shift + D`: Mostrar información de debug en consola
+- `Ctrl + Shift + D`: Display debug information in console
 
-## 🎨 Características CSS
+## 🎨 CSS Features
 
-### Variables CSS Personalizadas
+### Custom CSS Variables
 ```css
 --primary-color: #2196F3
 --secondary-color: #FF9800
@@ -162,45 +162,45 @@ docker run -d -p 8080:80 -v /workspace:/var/www/html php:apache
 --info-color: #00BCD4
 ```
 
-### Animaciones Disponibles
-- Spin (rotación)
-- Pulse (pulso)
-- Bounce (rebote)
-- Shake (vibración)
-- Fade (desvanecimiento)
-- Slide (deslizamiento)
-- Scale (escalado)
-- Gradient shift (gradiente animado)
+### Available Animations
+- Spin (rotation)
+- Pulse
+- Bounce
+- Shake
+- Fade
+- Slide
+- Scale
+- Gradient shift
 
-## 📊 Pruebas Recomendadas para CAM Service
+## 📊 Recommended Tests for CAM Service
 
-### Lista de Verificación
+### Checklist
 
-- [ ] Compartir pantalla completa
-- [ ] Compartir ventana específica
-- [ ] Compartir tab del navegador
-- [ ] Verificar colores y gradientes
-- [ ] Verificar animaciones CSS
-- [ ] Verificar elementos interactivos (formularios, botones)
-- [ ] Verificar canvas animado
-- [ ] Verificar tablas y datos dinámicos
-- [ ] Verificar scroll y navegación
-- [ ] Verificar diferentes resoluciones
-- [ ] Verificar tipografías y tamaños
-- [ ] Verificar efectos hover
-- [ ] Verificar alertas y notificaciones
+- [ ] Share full screen
+- [ ] Share specific window
+- [ ] Share browser tab
+- [ ] Verify colors and gradients
+- [ ] Verify CSS animations
+- [ ] Verify interactive elements (forms, buttons)
+- [ ] Verify animated canvas
+- [ ] Verify tables and dynamic data
+- [ ] Verify scrolling and navigation
+- [ ] Verify different resolutions
+- [ ] Verify typography and sizes
+- [ ] Verify hover effects
+- [ ] Verify alerts and notifications
 
-## 🐛 Debug y Troubleshooting
+## 🐛 Debug and Troubleshooting
 
-### Verificar Instalación PHP
+### Verify PHP Installation
 
 ```bash
 php -v
 ```
 
-### Ver Errores PHP
+### View PHP Errors
 
-Si hay problemas, habilitar display de errores en `index.php`:
+If there are issues, enable error display in `index.php`:
 
 ```php
 <?php
@@ -209,91 +209,91 @@ ini_set('display_errors', 1);
 ?>
 ```
 
-### Consola del Navegador
+### Browser Console
 
-Abrir DevTools (F12) y revisar la consola para ver:
-- Logs de inicialización
-- Información del navegador
-- Métricas de performance
-- Eventos detectados
+Open DevTools (F12) and check the console to see:
+- Initialization logs
+- Browser information
+- Performance metrics
+- Detected events
 
-### Verificar Archivos
+### Verify Files
 
 ```bash
-# Listar todos los archivos
+# List all files
 find /workspace -type f
 
-# Verificar permisos
+# Check permissions
 ls -la /workspace/
 ```
 
 ## 📱 Responsive Design
 
-El sitio es completamente responsive y se adapta a:
-- 📱 Móviles (< 768px)
+The site is fully responsive and adapts to:
+- 📱 Mobile (< 768px)
 - 📱 Tablets (768px - 1024px)
 - 🖥️ Desktop (> 1024px)
 
-## 🌐 Compatibilidad de Navegadores
+## 🌐 Browser Compatibility
 
 - ✅ Chrome/Edge (90+)
 - ✅ Firefox (88+)
 - ✅ Safari (14+)
 - ✅ Opera (76+)
 
-## 🚀 Optimizaciones
+## 🚀 Optimizations
 
-- CSS y JS sin dependencias externas
-- SVG para imágenes escalables
-- Animaciones con `will-change` para mejor performance
-- Intersection Observer para lazy animations
-- requestAnimationFrame para animaciones suaves
-- Debounce en eventos de resize
+- CSS and JS without external dependencies
+- SVG for scalable images
+- Animations with `will-change` for better performance
+- Intersection Observer for lazy animations
+- requestAnimationFrame for smooth animations
+- Debounce on resize events
 
-## 📈 Métricas de Performance
+## 📈 Performance Metrics
 
-El sitio incluye monitoreo automático de:
-- Tiempo de carga total
-- Tiempo de conexión
-- Tiempo de renderizado DOM
-- Información de viewport
-- Profundidad de color
+The site includes automatic monitoring of:
+- Total load time
+- Connection time
+- DOM rendering time
+- Viewport information
+- Color depth
 
-## 🤝 Contribuciones
+## 🤝 Contributions
 
-Este es un proyecto de prueba. Siéntete libre de:
-- Agregar más elementos de prueba
-- Mejorar animaciones
-- Agregar nuevos efectos CSS
-- Optimizar el código JavaScript
+This is a test project. Feel free to:
+- Add more test elements
+- Improve animations
+- Add new CSS effects
+- Optimize JavaScript code
 
-## 📝 Notas
+## 📝 Notes
 
-- Las fuentes utilizan fonts del sistema para máxima compatibilidad
-- Todas las imágenes son SVG embebidas
-- No requiere base de datos
-- No requiere dependencias npm/composer
-- Completamente standalone
+- Fonts use system fonts for maximum compatibility
+- All images are embedded SVGs
+- No database required
+- No npm/composer dependencies
+- Completely standalone
 
-## 🔒 Seguridad
+## 🔒 Security
 
-- Sanitización de inputs PHP con `htmlspecialchars()`
-- Validación de formularios en cliente y servidor
-- Sin ejecución de código no sanitizado
+- PHP input sanitization with `htmlspecialchars()`
+- Client and server form validation
+- No unsanitized code execution
 
-## 📞 Soporte
+## 📞 Support
 
-Para reportar problemas o sugerencias:
-1. Revisar la consola del navegador (F12)
-2. Verificar logs del servidor PHP
-3. Probar en diferentes navegadores
+To report issues or suggestions:
+1. Check browser console (F12)
+2. Verify PHP server logs
+3. Test in different browsers
 
-## 📄 Licencia
+## 📄 License
 
-Este proyecto es de código abierto y puede ser utilizado libremente para propósitos de prueba y desarrollo.
+This project is open source and can be used freely for testing and development purposes.
 
 ---
 
-**Desarrollado para pruebas de CAM Service** 🎥
+**Developed for CAM Service testing** 🎥
 
-*Última actualización: 2025-11-11*
+*Last updated: 2025-11-11*

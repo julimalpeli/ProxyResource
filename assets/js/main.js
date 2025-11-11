@@ -1,13 +1,13 @@
 /**
- * CAM Service Testing - JavaScript Principal
- * Scripts interactivos para la plataforma de pruebas
+ * CAM Service Testing - Main JavaScript
+ * Interactive scripts for the testing platform
  */
 
-// Esperar a que el DOM esté completamente cargado
+// Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('🎥 CAM Service Testing Platform - Inicializado');
+    console.log('🎥 CAM Service Testing Platform - Initialized');
     
-    // Inicializar todas las funciones
+    // Initialize all functions
     initRangeSlider();
     initCanvas();
     initInteractiveElements();
@@ -16,12 +16,12 @@ document.addEventListener('DOMContentLoaded', function() {
     initAnimationObserver();
     initColorChanger();
     
-    // Mostrar información de la página
+    // Display page information
     displayPageInfo();
 });
 
 /**
- * Inicializar el control deslizante de rango
+ * Initialize range slider control
  */
 function initRangeSlider() {
     const rangeInput = document.getElementById('range');
@@ -36,7 +36,7 @@ function initRangeSlider() {
 }
 
 /**
- * Inicializar el canvas con animación
+ * Initialize canvas with animation
  */
 function initCanvas() {
     const canvas = document.getElementById('test-canvas');
@@ -46,7 +46,7 @@ function initCanvas() {
     let particles = [];
     let animationId;
     
-    // Crear partículas
+    // Create particles
     class Particle {
         constructor() {
             this.reset();
@@ -77,12 +77,12 @@ function initCanvas() {
         }
     }
     
-    // Crear partículas iniciales
+    // Create initial particles
     for (let i = 0; i < 50; i++) {
         particles.push(new Particle());
     }
     
-    // Animar
+    // Animate
     function animate() {
         ctx.fillStyle = 'rgba(26, 26, 26, 0.1)';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -92,7 +92,7 @@ function initCanvas() {
             particle.draw();
         });
         
-        // Dibujar conexiones
+        // Draw connections
         particles.forEach((p1, i) => {
             particles.slice(i + 1).forEach(p2 => {
                 const dx = p1.x - p2.x;
@@ -113,20 +113,20 @@ function initCanvas() {
         animationId = requestAnimationFrame(animate);
     }
     
-    // Iniciar animación
+    // Start animation
     animate();
     
-    // Limpiar al salir
+    // Clean up on exit
     window.addEventListener('beforeunload', () => {
         cancelAnimationFrame(animationId);
     });
 }
 
 /**
- * Inicializar elementos interactivos
+ * Initialize interactive elements
  */
 function initInteractiveElements() {
-    // Agregar efectos hover a las tarjetas
+    // Add hover effects to cards
     const cards = document.querySelectorAll('.card, .info-card, .image-item');
     cards.forEach(card => {
         card.addEventListener('mouseenter', function() {
@@ -139,21 +139,21 @@ function initInteractiveElements() {
         });
     });
     
-    // Agregar contador de clics a los botones
+    // Add click counter to buttons
     const buttons = document.querySelectorAll('.btn');
     buttons.forEach(button => {
         let clickCount = 0;
         button.addEventListener('click', function(e) {
             if (this.type !== 'submit') {
                 clickCount++;
-                console.log(`Botón "${this.textContent}" clickeado ${clickCount} veces`);
+                console.log(`Button "${this.textContent}" clicked ${clickCount} times`);
             }
         });
     });
 }
 
 /**
- * Scroll suave para los enlaces de navegación
+ * Smooth scroll for navigation links
  */
 function initSmoothScroll() {
     const navLinks = document.querySelectorAll('a[href^="#"]');
@@ -183,7 +183,7 @@ function initSmoothScroll() {
 }
 
 /**
- * Validación de formulario
+ * Form validation
  */
 function initFormValidation() {
     const form = document.querySelector('.test-form');
@@ -204,11 +204,11 @@ function initFormValidation() {
         
         if (!isValid) {
             e.preventDefault();
-            showAlert('Por favor, completa todos los campos requeridos', 'error');
+            showAlert('Please complete all required fields', 'error');
         }
     });
     
-    // Limpiar error al escribir
+    // Clear error when typing
     const inputs = form.querySelectorAll('input, textarea, select');
     inputs.forEach(input => {
         input.addEventListener('input', function() {
@@ -218,7 +218,7 @@ function initFormValidation() {
 }
 
 /**
- * Observer para animar elementos al entrar en viewport
+ * Observer to animate elements when entering viewport
  */
 function initAnimationObserver() {
     const observerOptions = {
@@ -245,7 +245,7 @@ function initAnimationObserver() {
 }
 
 /**
- * Cambiar colores aleatorios en elementos específicos
+ * Change random colors in specific elements
  */
 function initColorChanger() {
     const colorElements = document.querySelectorAll('.animation-item .box');
@@ -261,9 +261,9 @@ function initColorChanger() {
 }
 
 /**
- * Mostrar alerta personalizada
+ * Show custom alert
  */
-function showAlert(message = '¡Botón clickeado!', type = 'info') {
+function showAlert(message = 'Button clicked!', type = 'info') {
     const alertDiv = document.createElement('div');
     alertDiv.className = `alert alert-${type}`;
     alertDiv.style.position = 'fixed';
@@ -284,37 +284,37 @@ function showAlert(message = '¡Botón clickeado!', type = 'info') {
     }, 3000);
 }
 
-// Función global para el botón de prueba
+// Global function for test button
 window.showAlert = showAlert;
 
 /**
- * Mostrar información de la página
+ * Display page information
  */
 function displayPageInfo() {
     console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
     console.log('🎥 CAM Service Testing Platform');
     console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
-    console.log('📊 Información del Navegador:');
+    console.log('📊 Browser Information:');
     console.log('  - User Agent:', navigator.userAgent);
-    console.log('  - Idioma:', navigator.language);
-    console.log('  - Plataforma:', navigator.platform);
-    console.log('  - Cookies:', navigator.cookieEnabled ? 'Habilitadas' : 'Deshabilitadas');
-    console.log('  - Online:', navigator.onLine ? 'Sí' : 'No');
+    console.log('  - Language:', navigator.language);
+    console.log('  - Platform:', navigator.platform);
+    console.log('  - Cookies:', navigator.cookieEnabled ? 'Enabled' : 'Disabled');
+    console.log('  - Online:', navigator.onLine ? 'Yes' : 'No');
     console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
-    console.log('📐 Información de Pantalla:');
-    console.log('  - Resolución:', screen.width + 'x' + screen.height);
+    console.log('📐 Screen Information:');
+    console.log('  - Resolution:', screen.width + 'x' + screen.height);
     console.log('  - Viewport:', window.innerWidth + 'x' + window.innerHeight);
     console.log('  - Color Depth:', screen.colorDepth + ' bits');
     console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
-    console.log('⏰ Información de Tiempo:');
-    console.log('  - Fecha:', new Date().toLocaleDateString('es-ES'));
-    console.log('  - Hora:', new Date().toLocaleTimeString('es-ES'));
+    console.log('⏰ Time Information:');
+    console.log('  - Date:', new Date().toLocaleDateString('en-US'));
+    console.log('  - Time:', new Date().toLocaleTimeString('en-US'));
     console.log('  - Timestamp:', Date.now());
     console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
 }
 
 /**
- * Utilidad para detectar rendimiento
+ * Utility to detect performance
  */
 function checkPerformance() {
     if (window.performance && window.performance.timing) {
@@ -323,21 +323,21 @@ function checkPerformance() {
         const connectTime = perfData.responseEnd - perfData.requestStart;
         const renderTime = perfData.domComplete - perfData.domLoading;
         
-        console.log('⚡ Métricas de Rendimiento:');
-        console.log('  - Tiempo de carga:', pageLoadTime + 'ms');
-        console.log('  - Tiempo de conexión:', connectTime + 'ms');
-        console.log('  - Tiempo de renderizado:', renderTime + 'ms');
+        console.log('⚡ Performance Metrics:');
+        console.log('  - Load time:', pageLoadTime + 'ms');
+        console.log('  - Connection time:', connectTime + 'ms');
+        console.log('  - Render time:', renderTime + 'ms');
     }
 }
 
-// Verificar rendimiento cuando la página termine de cargar
+// Check performance when page finishes loading
 window.addEventListener('load', checkPerformance);
 
 /**
- * Manejador de eventos de teclado
+ * Keyboard event handler
  */
 document.addEventListener('keydown', function(e) {
-    // Ctrl + Shift + D para mostrar info de debug
+    // Ctrl + Shift + D to display debug info
     if (e.ctrlKey && e.shiftKey && e.key === 'D') {
         e.preventDefault();
         displayPageInfo();
@@ -346,26 +346,26 @@ document.addEventListener('keydown', function(e) {
 });
 
 /**
- * Monitorear cambios de tamaño de ventana
+ * Monitor window resize changes
  */
 let resizeTimer;
 window.addEventListener('resize', function() {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(function() {
-        console.log('📐 Ventana redimensionada:', window.innerWidth + 'x' + window.innerHeight);
+        console.log('📐 Window resized:', window.innerWidth + 'x' + window.innerHeight);
     }, 250);
 });
 
 /**
- * Detectar cuando la página se vuelve visible/oculta
+ * Detect when page becomes visible/hidden
  */
 document.addEventListener('visibilitychange', function() {
     if (document.hidden) {
-        console.log('👁️ Página oculta');
+        console.log('👁️ Page hidden');
     } else {
-        console.log('👁️ Página visible');
+        console.log('👁️ Page visible');
     }
 });
 
-// Log final
-console.log('✅ Todos los scripts inicializados correctamente');
+// Final log
+console.log('✅ All scripts initialized successfully');
